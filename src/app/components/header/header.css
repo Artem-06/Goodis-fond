@@ -1,0 +1,34 @@
+header {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+nav ul {
+  font-family: Myriad Pro, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style-type: none;
+  padding: 0;
+  top: 0;
+  left: 0;
+  font-size: 18px;
+}
+
+.logo {
+  text-align: center;
+}
+
+.logo img {
+  height: 350px;
+}
+
+p {
+    right: 0;
+    bottom: 0;
+}
+
+ul, p {
+  position: absolute;
+}

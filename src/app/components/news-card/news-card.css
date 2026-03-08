@@ -1,0 +1,11 @@
+img {
+    border: 2px solid #000;
+    border-radius: 50px;
+    height: 450px;
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+img:hover {
+    transform: scale(0.95);
+}

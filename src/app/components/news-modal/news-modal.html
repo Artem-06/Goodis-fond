@@ -1,0 +1,25 @@
+<div class="modal" [class.active]="newsService.selectedNews()" (click)="newsService.closeModal()">
+  <div
+    class="modal-content"
+    [hidden]="!newsService.selectedNews()"
+    (click)="$event.stopPropagation()"
+  >
+    <button class="close-btn" (click)="newsService.closeModal()">←</button>
+
+    @if (newsService.selectedNews(); as data) {
+      <div class="modal-grid">
+        <img [src]="data.image" alt="Фото" />
+        @if (data.video) {
+          <video [src]="data.video" controls></video>
+        } @else {
+          <div class="video-placeholder">відео</div>
+        }
+      </div>
+
+      <h2>{{ data.title }}</h2>
+      @for (p of data.paragraphs; track $index) {
+        <p>{{ p }}</p>
+      }
+    }
+  </div>
+</div>

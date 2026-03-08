@@ -1,0 +1,24 @@
+#about {
+  display: flex;
+  justify-content: space-between;
+}
+
+#subtitle {
+  font-size: 12px;
+}
+
+h2 {
+  text-align: left;
+}
+
+.more-content-wrapper h3 {
+  color: #727272;
+}
+
+.more-grid {
+  padding: 10px 0;
+}
+
+#about-more {
+  margin: 0;
+}
