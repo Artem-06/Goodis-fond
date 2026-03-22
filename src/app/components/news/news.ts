@@ -21,6 +21,7 @@ export class News implements AfterViewInit {
       pagination: false,
       gap: '20px',
       breakpoints: {
+        1200: { perPage: 2 },
         768: { perPage: 1 },
       },
     }).mount();
@@ -33,7 +34,7 @@ export class News implements AfterViewInit {
       const selectedItem = allNews[realIndex];
 
       if (selectedItem) {
-        this.newsService.openModal(selectedItem);
+        this.newsService.openNews(selectedItem);
       }
     });
   }

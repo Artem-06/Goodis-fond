@@ -7,18 +7,23 @@
     <button class="close-btn" (click)="newsService.closeModal()">←</button>
 
     @if (newsService.selectedNews(); as data) {
-      <div class="modal-grid">
+      <div class="modal-grid" [class.single-item]="!data.video">
         <img [src]="data.image" alt="Фото" />
+
         @if (data.video) {
           <video [src]="data.video" controls></video>
-        } @else {
-          <div class="video-placeholder">відео</div>
         }
       </div>
 
       <h2>{{ data.title }}</h2>
-      @for (p of data.paragraphs; track $index) {
-        <p>{{ p }}</p>
+      @for (paragraph of data.paragraphs; track $index) {
+        <p [innerHTML]="paragraph"></p>
+      }
+      @if (data.actionUrl) {
+        <br />
+        <a [href]="data.actionUrl" target="_blank" class="button">
+          {{ data.actionLabel || 'Долучитися' }}
+        </a>
       }
     }
   </div>

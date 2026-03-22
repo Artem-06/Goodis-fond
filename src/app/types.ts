@@ -1,7 +1,11 @@
 export interface INewsItem {
-    id: string;
-    title: string;
-    image: string;
-    video?: string;
-    paragraphs: string[];
+  id: number;
+  title: string;
+  date: Date;
+  image: string;
+  video?: string;
+  externalUrl?: string;
+  actionUrl?: string;
+  actionLabel?: string;
+  paragraphs: string[];
 }

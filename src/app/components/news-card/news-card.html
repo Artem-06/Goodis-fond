@@ -1,5 +1,8 @@
-<div class="news-item">
-	<a class="news-link">
-		<img [src]="data.image" [alt]="data.title" />
-	</a>
+<div class="news-item" (click)="newsService.openNews(data); $event.stopPropagation()">
+  @if (data.date) {
+    <div class="date-badge">{{ data.date | date: 'dd.MM.yyyy' }}</div>
+  }
+  <div class="news-media">
+    <img [src]="data.image" [alt]="data.title" loading="lazy" />
+  </div>
 </div>

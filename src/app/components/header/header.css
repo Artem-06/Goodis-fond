@@ -5,7 +5,9 @@ header {
 }
 
 nav ul {
-  font-family: Myriad Pro, sans-serif;
+  font-family:
+    Myriad Pro,
+    sans-serif;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -14,6 +16,16 @@ nav ul {
   top: 0;
   left: 0;
   font-size: 18px;
+}
+
+li a {
+  display: inline-block;
+  transition: 0.2s;
+}
+
+li a:hover {
+  font-weight: bold;
+  transform: scale(1.1);
 }
 
 .logo {
@@ -25,10 +37,35 @@ nav ul {
 }
 
 p {
-    right: 0;
-    bottom: 0;
+  right: 0;
+  bottom: 0;
 }
 
-ul, p {
+ul,
+p {
   position: absolute;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  .logo img {
+    height: 200px;
+  }
+
+  p {
+    position: relative;
+  }
+
+  p {
+    text-align: end;
+  }
+}
+
+@media (max-width: 480px) {
+  ul {
+    position: relative;
+  }
 }

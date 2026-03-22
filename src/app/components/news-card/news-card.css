@@ -1,11 +1,43 @@
 img {
-    border: 2px solid #000;
-    border-radius: 50px;
-    height: 450px;
-    cursor: pointer;
-    transition: 0.15s;
+  border: 2px solid #000;
+  border-radius: 50px;
+  height: 450px;
+  cursor: pointer;
+  transition: 0.15s;
 }
 
 img:hover {
-    transform: scale(0.95);
+  transform: scale(0.95);
+}
+
+@media (max-width: 1300px) {
+  img {
+    height: 400px;
+  }
+}
+
+@media (max-width: 1200px) {
+  img {
+    height: 450px;
+  }
+}
+
+@media (max-width: 1024px) {
+  img {
+    height: 400px;
+  }
+}
+
+@media (max-width: 850px) {
+  img {
+    height: 350px;
+    border-radius: 25px;
+  }
+}
+
+@media (max-width: 400px) {
+  img {
+    height: 300px;
+    border-radius: 25px;
+  }
 }
